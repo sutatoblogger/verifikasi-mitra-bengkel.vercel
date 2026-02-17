@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposal Upgrade VIP & Pengamanan Aset Digital | CiledugPromo</title>
+    <title>Proposal Upgrade VIP & Pengamanan Aset | CiledugPromo</title>
+    <meta name="description" content="Dokumen rahasia pengamanan aset digital dan upgrade VIP kemitraan bengkel mobil CiledugPromo.">
+    <meta name="theme-color" content="#070709">
     <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-dark: #070709;
@@ -16,6 +22,7 @@
             --text-main: #ffffff;
             --text-muted: #9ca3af;
             --border-glow: rgba(212, 175, 55, 0.3);
+            --green-success: #10b981;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
@@ -23,55 +30,46 @@
         
         .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
         
-        /* Alert Header (Top Banner) */
+        /* Alert Banner */
         .alert-banner { background: rgba(239, 68, 68, 0.1); border-bottom: 2px solid var(--red-alert); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
         .alert-banner h1 { color: var(--red-alert); font-size: 14px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; animation: pulse 2s infinite; display: flex; align-items: center; justify-content: center; gap: 10px; }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
 
-        /* Branding Header (Logo) */
+        /* Header Logo */
         .header-brand { text-align: center; margin-top: 30px; margin-bottom: 20px; }
-        .logo-img { 
-            width: 80px; height: 80px; object-fit: cover; border-radius: 16px; 
-            border: 2px solid var(--gold); box-shadow: 0 10px 20px rgba(0,0,0,0.6), 0 0 15px rgba(212, 175, 55, 0.3); 
-        }
+        .logo-img { width: 80px; height: 80px; object-fit: cover; border-radius: 16px; border: 2px solid var(--gold); box-shadow: 0 10px 20px rgba(0,0,0,0.6), 0 0 15px rgba(212, 175, 55, 0.3); }
 
-        /* Main Title */
+        /* Typography */
         .page-title { text-align: center; margin-bottom: 40px; }
         .page-title h2 { font-size: 28px; font-weight: 900; text-transform: uppercase; line-height: 1.2; }
         .page-title h2 span { color: var(--gold); }
         .page-title p { color: var(--text-muted); margin-top: 10px; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
 
-        /* Section Cards */
-        .card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: relative; overflow: hidden; }
+        /* Cards */
+        .card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.4); position: relative; overflow: hidden; }
         .card-red { border-left: 4px solid var(--red-alert); }
         .card-gold { border-left: 4px solid var(--gold); }
-        
         .card h3 { font-size: 20px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
         .card-red h3 { color: var(--red-alert); }
         .card-gold h3 { color: var(--gold); }
         .card p { color: #d1d5db; margin-bottom: 15px; font-size: 15px; }
-        .card strong { color: #fff; }
+        
+        /* Prosedur Order (Timeline) */
+        .timeline { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+        .timeline-item { display: flex; align-items: flex-start; gap: 15px; background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+        .timeline-number { background: var(--gold); color: #000; width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+        .timeline-content h4 { font-size: 15px; color: #fff; margin-bottom: 3px; }
+        .timeline-content p { font-size: 13px; color: var(--text-muted); margin: 0; }
 
-        /* Highlight Box (ROI) */
-        .roi-box { background: rgba(212, 175, 55, 0.05); border: 1px dashed var(--gold); padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0; }
-        .roi-box h4 { color: var(--gold-light); font-size: 24px; font-weight: 900; margin-bottom: 5px; }
-        .roi-box p { margin: 0; font-size: 14px; color: #a1a1aa; }
-
-        /* Proofing Area */
+        /* Images */
         .proof-gallery { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; margin-bottom: 20px; }
         .proof-img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-glow); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-        
-        /* PDF Buttons */
-        .pdf-links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
-        .btn-pdf { display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px 15px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.3s; }
-        .btn-pdf:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold); color: var(--gold-light); transform: translateY(-2px); }
 
         /* Pricing Table */
         .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
-        .pricing-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 25px; text-align: center; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
-        .pricing-card.vvip { border: 2px solid var(--gold); background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, rgba(18,18,21,1) 100%); transform: scale(1.02); z-index: 10; }
+        .pricing-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 25px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+        .pricing-card.vvip { border: 2px solid var(--gold); background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, rgba(18,18,21,1) 100%); transform: scale(1.02); z-index: 10; box-shadow: 0 20px 40px rgba(212,175,55,0.15); }
         .badge-best { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #000; font-size: 11px; font-weight: 900; padding: 4px 15px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
-        
         .pricing-title { font-size: 22px; font-weight: 900; margin-bottom: 10px; }
         .vvip .pricing-title { color: var(--gold); }
         .price { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 5px; }
@@ -81,17 +79,30 @@
         .feature-list li { font-size: 13px; color: #d1d5db; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;}
         .feature-list li::before { content: '✓'; color: var(--gold); font-weight: bold; }
 
-        /* CTA Buttons */
-        .btn { display: block; width: 100%; padding: 15px; border-radius: 8px; text-align: center; font-weight: 900; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; font-size: 14px; }
+        /* Info Box Addons */
+        .bonus-box { background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.2); padding: 15px; border-radius: 8px; margin-top: 15px; text-align: left; }
+        .speed-box { background: rgba(16, 185, 129, 0.05); border: 1px solid var(--green-success); padding: 15px; border-radius: 8px; margin-top: 15px; }
+
+        /* Payment Section */
+        .payment-card { background: linear-gradient(145deg, #1a1a24, #121215); border: 1px solid var(--gold); border-radius: 12px; padding: 30px; margin-top: 40px; text-align: center; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1); }
+        .bank-info { background: #fff; color: #000; padding: 20px; border-radius: 8px; display: inline-block; margin: 20px 0; text-align: left; min-width: 250px; }
+        .bank-logo { font-size: 24px; font-weight: 900; color: #005A9C; margin-bottom: 10px; letter-spacing: 1px; } /* Warna BCA */
+        .rekening { font-size: 28px; font-weight: 900; font-family: monospace; letter-spacing: 2px; }
+
+        /* Buttons */
+        .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 15px; border-radius: 8px; text-align: center; font-weight: 900; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; font-size: 13px; margin-top: 10px; }
         .btn-outline { background: transparent; border: 1px solid #fff; color: #fff; }
         .btn-outline:hover { background: rgba(255,255,255,0.1); }
         .btn-gold { background: linear-gradient(135deg, var(--gold), #b8860b); color: #000; border: none; box-shadow: 0 5px 15px rgba(212,175,55,0.3); }
         .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(212,175,55,0.5); }
+        .btn-blue { background: transparent; border: 1px solid #3b82f6; color: #3b82f6; padding: 10px; font-size: 11px; }
+        .btn-blue:hover { background: rgba(59, 130, 246, 0.1); }
+        .btn-wa { background: #25D366; color: #000; font-size: 16px; padding: 18px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
+        .btn-wa:hover { background: #1ebd5a; transform: translateY(-3px); }
 
-        /* Footer Branding */
         .footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: #6b7280; font-size: 12px; }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .pricing-grid { grid-template-columns: 1fr; }
             .pricing-card.vvip { transform: scale(1); margin-top: 15px; }
         }
@@ -106,7 +117,7 @@
     <div class="container">
         
         <header class="header-brand">
-            <img src="logo-ciledugpromo.jpg" alt="Ciledug Promo Official Logo" class="logo-img">
+            <img src="logo-ciledugpromo.webp" alt="Ciledug Promo Official Logo" class="logo-img" width="80" height="80" decoding="async">
         </header>
 
         <div class="page-title">
@@ -115,49 +126,36 @@
         </div>
 
         <div class="card card-red">
-            <h3>🩸 Kebocoran Orderan Setiap Hari</h3>
-            <p>Saat ini, ratusan pemilik mobil melihat nama bengkel Anda di artikel Halaman 1 Google kami. Namun, karena Anda berada di slot Basic (Gratis), <strong>Tombol WhatsApp Anda mati dan tidak bisa diklik.</strong></p>
-            <p><strong>Akibatnya?</strong> Pembaca yang malas mengetik nomor manual akhirnya menyerah, dan beralih mengklik tombol WhatsApp milik bengkel kompetitor di atas/bawah Anda.</p>
-            <p style="color: var(--red-alert); font-style: italic;">"Anda sedang memberikan pelanggan potensial Anda secara cuma-cuma kepada bengkel tetangga."</p>
-        </div>
-
-        <div class="card card-red">
-            <h3>⏳ Sistem Lelang Terbuka (Sisa 1 Slot)</h3>
-            <p>Posisi Gratis Anda saat ini bersifat <strong>SEMENTARA</strong>. Kami menerapkan sistem Lelang Terbuka (Siapa Cepat, Dia Dapat).</p>
-            <p>Saat ini, Slot VIP berfitur Tombol Chat WhatsApp <strong>HANYA TERSISA 1 POSISI</strong>. Begitu ada bengkel lain yang mengambil slot ini hari ini, nama bengkel Anda akan otomatis <strong>TERGUSUR DAN DIHAPUS PERMANEN</strong> dari daftar pencarian Google kami.</p>
+            <h3>🩸 Kebocoran Orderan & Lelang Slot</h3>
+            <p>Saat ini, karena Anda berada di slot Gratis, <strong>Tombol WhatsApp Anda mati</strong>. Pelanggan yang malas mengetik nomor akhirnya lari mengklik WA kompetitor di atas/bawah Anda.</p>
+            <p><strong>Penting:</strong> Posisi Gratis Anda saat ini bersifat <strong>SEMENTARA (Lelang Terbuka)</strong>. Slot VIP berfitur Tombol Chat WhatsApp <strong>SISA 1 POSISI</strong>. Begitu ada bengkel lain yang mengambil slot ini, nama bengkel Anda akan <strong>TERGUSUR & DIHAPUS PERMANEN</strong>.</p>
         </div>
 
         <div class="card card-gold">
-            <h3>🧮 Logika Bisnis Pencetak Uang</h3>
-            <p>Upgrade ke Paket VIP membutuhkan investasi Rp 299.000 / Tahun.</p>
-            <div class="roi-box">
-                <h4>Rp 819 / Hari</h4>
-                <p>Harga yang Anda bayar untuk mendominasi Google.</p>
-            </div>
-            <p>Dapatkan <strong>1 pelanggan ganti oli saja</strong> dari artikel ini, maka modal Anda sudah KEMBALI 100% di hari yang sama. Sisa 364 hari ke depan? Itu adalah <strong>Profit Bersih Tanpa Batas</strong>. Secara matematika, mustahil Anda rugi.</p>
-        </div>
-
-        <div class="card card-gold">
-            <h3>👑 MEGA BONUS: Dominasi Skala Nasional</h3>
-            <p>Bagi Anda yang tidak suka bersaing dan ingin langsung menjadi <strong>RAJA BENGKEL</strong> di Ciledug, kami menyediakan Paket VVIP. Anda tidak hanya mendapatkan Website Premium Speed 100, tapi juga <strong>Artikel SEO Organik di Portal Nasional DongkrakBisnis.com.</strong></p>
+            <h3>⚙️ Prosedur Transparansi Kinerja</h3>
+            <p>Kami bekerja secara profesional dan transparan. Berikut adalah alur eksekusi kami dari awal hingga aset digital Anda siap mencetak uang:</p>
             
-            <div style="background: #1a1a24; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: 13px; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; text-align: center;"><strong>🏆 STUDI KASUS NYATA (REAL PROOF)</strong></p>
-                <p style="font-size: 14px; margin-bottom: 15px; text-align: center; color: #d1d5db;">Kami memegang klien skala Nasional <strong>(Agensi Detektif Swasta VIP)</strong> dan berhasil membuat mereka merajai halaman 1 Google. Bengkel Anda akan kami berikan perlakuan elit yang sama!</p>
-                
-                <div class="proof-gallery">
-                    <img src="bukti-detektif-01.webp" alt="Bukti Laporan SEO Nasional Jasa Detektif - Cover" class="proof-img" loading="lazy">
-                    <img src="bukti-detektif-02.webp" alt="Bukti Laporan SEO Nasional Jasa Detektif - Keyword" class="proof-img" loading="lazy">
-                </div>
+            <div class="timeline">
+                <div class="timeline-item"><div class="timeline-number">1</div><div class="timeline-content"><h4>Data Diterima</h4><p>Materi mentah bengkel Anda kami analisis.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">2</div><div class="timeline-content"><h4>Drafting & ACC</h4><p>Pembuatan draft artikel. Klien meninjau dan ACC.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">3</div><div class="timeline-content"><h4>Booking & Pembayaran</h4><p>Klien mentransfer biaya untuk mengunci slot VIP secara permanen.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">4</div><div class="timeline-content"><h4>Proses Publikasi</h4><p>Tim IT melakukan injeksi SEO dan optimasi Halaman 1 Google.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">5</div><div class="timeline-content"><h4>Report & Selesai</h4><p>Penyerahan Laporan Artikel Live beserta bukti tangkapan layar (Screenshot).</p></div></div>
+            </div>
+        </div>
 
-                <div class="pdf-links">
-                    <a href="https://drive.google.com/file/d/1T_9WPKkTCec2IYxNQZEw3M05OFWrcOyK/view?usp=sharing" target="_blank" class="btn-pdf">
-                        📄 BUKA PDF: LAPORAN ARTIKEL SEO ORGANIK
-                    </a>
-                    <a href="https://drive.google.com/file/d/1spPSHZKfs2ymLNqencgWVbyRvnszNgak/view?usp=sharing" target="_blank" class="btn-pdf">
-                        📄 BUKA PDF: BUKTI RANKING KATA KUNCI GOOGLE
-                    </a>
-                </div>
+        <div class="card card-gold">
+            <h3>👑 MEGA BONUS: Bukti Dominasi Skala Nasional</h3>
+            <p>Bagi pengambil Paket VVIP, Anda akan mendapatkan <strong>Artikel SEO Organik di Portal Nasional DongkrakBisnis.com.</strong> Kami memegang klien Nasional (Agensi Detektif Swasta VIP) dan membuat mereka merajai halaman 1 Google. Bengkel Anda akan mendapat perlakuan elit yang sama!</p>
+            
+            <div class="proof-gallery">
+                <img src="bukti-detektif-01.webp" alt="Bukti Laporan SEO Nasional Jasa Detektif - Cover" class="proof-img" width="800" height="auto" loading="lazy" decoding="async">
+                <img src="bukti-detektif-02.webp" alt="Bukti Laporan SEO Nasional Jasa Detektif - Keyword" class="proof-img" width="800" height="auto" loading="lazy" decoding="async">
+            </div>
+            
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="https://drive.google.com/file/d/1T_9WPKkTCec2IYxNQZEw3M05OFWrcOyK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 11px; padding: 10px;">📄 PDF: Artikel SEO</a>
+                <a href="https://drive.google.com/file/d/1spPSHZKfs2ymLNqencgWVbyRvnszNgak/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 11px; padding: 10px;">📄 PDF: Bukti Keyword</a>
             </div>
         </div>
 
@@ -172,10 +170,14 @@
                         <li>Kunci Posisi (Anti Tergusur)</li>
                         <li>Aktivasi Tombol WhatsApp Langsung</li>
                         <li>Aktivasi Link Navigasi Google Maps</li>
-                        <li>Bonus: 1x Artikel Liputan di Portal Lokal</li>
                     </ul>
+                    
+                    <div class="bonus-box">
+                        <span style="font-size: 11px; color: var(--gold); font-weight: bold; text-transform: uppercase;">🎁 Bonus Spesial:</span>
+                        <p style="font-size: 12px; color: #fff; margin: 5px 0;">1x Artikel Liputan Profil Bisnis di Portal Lokal (CiledugPromo).</p>
+                        <a href="https://ciledugpromo.biz.id/2/ARTICLES/175/pintu-harmonika-langkah-satu-anti-miring-lestari-jaya" target="_blank" rel="noopener noreferrer" class="btn btn-blue">👁️ Lihat Contoh Artikel Liputan</a>
+                    </div>
                 </div>
-                <a href="https://wa.me/6285283212205?text=Halo%20Tim%20Redaksi,%20saya%20mau%20amankan%20sisa%201%20Slot%20VIP%20(299rb)%20untuk%20bengkel%20saya%20agar%20tidak%20tergusur%20dan%20WA%20bisa%20diklik." target="_blank" class="btn btn-outline">Amankan Slot VIP</a>
             </div>
 
             <div class="pricing-card vvip">
@@ -185,18 +187,41 @@
                     <div class="price">Rp 749rb<span> (Sekali Bayar)</span></div>
                     <ul class="feature-list">
                         <li><strong>Semua Fitur VIP Basic</strong></li>
-                        <li>Pembuatan Website Premium Speed 100</li>
                         <li>Tampilan Kotak Emas Bintang 5 di Artikel</li>
-                        <li><strong>MEGA BONUS: Artikel SEO Organik Nasional</strong></li>
+                        <li><strong>MEGA BONUS: Artikel SEO Nasional</strong></li>
+                        <li>Pembuatan Website Premium Mandiri</li>
                     </ul>
+
+                    <div class="speed-box">
+                        <p style="font-size: 12px; color: #fff; margin-bottom: 10px; font-weight: bold;">🚀 Garansi Website Kecepatan Kilat (Score 100):</p>
+                        <img src="test-page-speed.webp" alt="Bukti Kecepatan Website PageSpeed 100" class="proof-img" style="margin-top: 0; border: none;" width="800" height="auto" loading="lazy" decoding="async">
+                        <a href="https://bengkel-mobil-tangerang-24jam.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="font-size: 11px; padding: 10px; margin-top: 15px;">🌐 Lihat Demo Dummy Website VVIP</a>
+                    </div>
                 </div>
-                <a href="https://wa.me/6285283212205?text=Halo%20Tim%20Redaksi,%20saya%20ambil%20paket%20Tahta%20VVIP%20(749rb)%20+%20Mega%20Bonus%20Artikel%20SEO%20Nasional.%20Tolong%20kunci%20posisi%20bengkel%20saya%20sekarang." target="_blank" class="btn btn-gold">Klaim Tahta VVIP Sekarang</a>
             </div>
+        </div>
+
+        <div class="payment-card">
+            <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">LAKUKAN PEMBAYARAN & KUNCI SLOT</h3>
+            <p style="color: var(--text-muted); font-size: 14px;">Silakan transfer sesuai paket yang dipilih ke rekening resmi kami di bawah ini untuk memulai proses <em>Drafting</em>.</p>
+            
+            <div class="bank-info">
+                <div class="bank-logo">Bank BCA</div>
+                <div class="rekening">7655432353</div>
+                <div style="font-size: 16px; font-weight: bold; margin-top: 5px; color: #444;">A.n: SUTATO</div>
+            </div>
+
+            <p style="color: #d1d5db; font-size: 14px; margin-bottom: 20px;">Jika sudah melakukan transfer, wajib klik tombol di bawah ini untuk mengirimkan bukti struk/<em>screenshot</em> pembayaran ke WhatsApp Redaksi.</p>
+            
+            <a href="https://wa.me/6285283212205?text=Halo%20Tim%20Redaksi%20CiledugPromo,%20saya%20sudah%20melakukan%20Transfer%20ke%20BCA%20SUTATO%20untuk%20mengamankan%20slot%20Bengkel%20saya.%0A%0ABerikut%20saya%20lampirkan%20foto%20bukti%20transfernya%20(Mohon%20tunggu%20foto%20terkirim):" target="_blank" rel="noopener noreferrer" class="btn btn-wa">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+                KONFIRMASI & UPLOAD BUKTI TRANSFER
+            </a>
         </div>
 
         <footer class="footer">
             <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed rgba(212, 175, 55, 0.3); display: flex; flex-direction: column; align-items: center; gap: 5px;">
-                <span style="font-size: 11px; color: #777; letter-spacing: 2px; text-transform: uppercase;">Sponsor Utama & Penerbit:</span>
+                <span style="font-size: 11px; color: #777; letter-spacing: 2px; text-transform: uppercase;">Rekening & Sponsor Utama Resmi:</span>
                 <a href="https://ciledugpromo.biz.id" target="_blank" rel="noopener noreferrer" style="color: var(--gold); font-weight: 900; font-size: 18px; letter-spacing: 1px; text-decoration: none; text-shadow: 0 0 15px rgba(212, 175, 55, 0.5); text-transform: uppercase;">
                     CILEDUGPROMO.BIZ.ID
                 </a>
